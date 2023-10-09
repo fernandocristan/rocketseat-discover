@@ -1,3 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: aqua;
+    background-image: url("./assets/bg-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: top center; /*Top indica onde comeca a posicao de altura da imagem */
+    background-size: cover; /*Cobre toda a área visível*/
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF
+}
+
+#container {
+    width: 360px;
+    /*border: 1px solid red;*/
+    margin: auto;  /*Alinha ao meio*/
+    margin-top: 56px auto 0px;   
+}
+
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img {
+    /*
+        img é inline e não dá para aplicar margin
+        Por isso podemos colocar display: block; margin: auto;
+        Uma outra forma é no pai (profile) colocar text-align: center; que aplica em elementos inline
+    */    
+    width: 112px;
+}
+
+#profile p {
+    /* font-size: 16px; Padrão navegadores*/
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
 }
