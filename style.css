@@ -43,3 +43,30 @@ body * {
     line-height: 24px;
     margin-top: 8px;
 }
+
+ul {
+    list-style: none;
+    display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado */
+    flex-direction: column; /*padrão é row */
+    gap: 8px; /*Espaço entre elementos, com base no direction. Se é row, o espaço fica entre colunas se é column fica enre linhas */
+
+}
+
+ul li a{
+    display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado*/
+    align-items: center;/*vertical*/
+    justify-content: center; /*horizontal*/
+    padding: 16px 24px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255, 1); 
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background .5s; /*Transiciona as propriedades desejas no tempo informado. All = todas as props*/
+}
+
+ul li a:hover{
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid white;
+}
