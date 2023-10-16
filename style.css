@@ -19,8 +19,9 @@ body * {
 #container {
     width: 360px;
     /*border: 1px solid red;*/
-    margin: auto;  /*Alinha ao meio*/
-    margin-top: 56px auto 0px;   
+    /*margin: auto;  /*Alinha ao meio*/
+    margin: 56px auto 0px;   
+    padding: 0px 24px;
 }
 
 #profile {
