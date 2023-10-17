@@ -1,0 +1,1 @@
+Ao setar display: flex o elemento passa a ocupar todo o espaço. Por exemplo o <a>, ele ocupa somente seu espaço (inline), mas quando recebe o display passa a ocupar toda a largura (block)
