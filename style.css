@@ -50,6 +50,7 @@ ul {
   display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado */
   flex-direction: column; /*padrão é row */
   gap: 8px; /*Espaço entre elementos, com base no direction. Se é row, o espaço fica entre colunas se é column fica enre linhas */
+  padding: 24px 0px;
 }
 
 ul li a {
@@ -69,4 +70,14 @@ ul li a {
 ul li a:hover {
   background: rgba(255, 255, 255, 0.05);
   border: 1.5px solid white;
+}
+
+/* social links */
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 24px 0px;
+  font-size: 32px;
 }
