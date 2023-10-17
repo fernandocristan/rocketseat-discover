@@ -1,73 +1,72 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url("./assets/bg-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: top center; /*Top indica onde comeca a posicao de altura da imagem */
-    background-size: cover; /*Cobre toda a área visível*/
+  background-image: url("./assets/bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top center; /*Top indica onde comeca a posicao de altura da imagem */
+  background-size: cover; /*Cobre toda a área visível*/
 }
 
 body * {
-    font-family: 'Inter', sans-serif;
-    color: #FFFFFF
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
 }
 
 #container {
-    width: 360px;
-    /*border: 1px solid red;*/
-    /*margin: auto;  /*Alinha ao meio*/
-    margin: 56px auto 0px;   
-    padding: 0px 24px;
+  width: 360px;
+  /*border: 1px solid red;*/
+  /*margin: auto;  /*Alinha ao meio*/
+  margin: 56px auto 0px;
+  padding: 0px 24px;
 }
 
 #profile {
-    text-align: center;
-    padding: 24px;
+  text-align: center;
+  padding: 24px;
 }
 
 #profile img {
-    /*
+  /*
         img é inline e não dá para aplicar margin
         Por isso podemos colocar display: block; margin: auto;
         Uma outra forma é no pai (profile) colocar text-align: center; que aplica em elementos inline
-    */    
-    width: 112px;
+    */
+  width: 112px;
 }
 
 #profile p {
-    /* font-size: 16px; Padrão navegadores*/
-    font-weight: 500;
-    line-height: 24px;
-    margin-top: 8px;
+  /* font-size: 16px; Padrão navegadores*/
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
 }
 
 ul {
-    list-style: none;
-    display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado */
-    flex-direction: column; /*padrão é row */
-    gap: 8px; /*Espaço entre elementos, com base no direction. Se é row, o espaço fica entre colunas se é column fica enre linhas */
-
+  list-style: none;
+  display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado */
+  flex-direction: column; /*padrão é row */
+  gap: 8px; /*Espaço entre elementos, com base no direction. Se é row, o espaço fica entre colunas se é column fica enre linhas */
 }
 
-ul li a{
-    display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado*/
-    align-items: center;/*vertical*/
-    justify-content: center; /*horizontal*/
-    padding: 16px 24px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255, 1); 
-    border-radius: 8px;
-    -webkit-backdrop-filter: blur(4px);
-    text-decoration: none;
-    font-weight: 500;
-    transition: background .5s; /*Transiciona as propriedades desejas no tempo informado. All = todas as props*/
+ul li a {
+  display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado*/
+  align-items: center; /*vertical*/
+  justify-content: center; /*horizontal*/
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.5s; /*Transiciona as propriedades desejas no tempo informado. All = todas as props*/
 }
 
-ul li a:hover{
-    background: rgba(255, 255, 255, 0.05);
-    border: 1.5px solid white;
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid white;
 }
