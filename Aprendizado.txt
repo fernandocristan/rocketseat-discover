@@ -1,1 +1,11 @@
 Ao setar display: flex o elemento passa a ocupar todo o espaço. Por exemplo o <a>, ele ocupa somente seu espaço (inline), mas quando recebe o display passa a ocupar toda a largura (block)
+
+margin: 4px auto; /*Alinha no meio pois é display block*/
+
+/*Alinha no meio pois é display flex*/
+display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado*/
+align-items: center; /*vertical*/
+justify-content: center; /*horizontal*/
+
+/*alinha texto*/
+text-align: center;

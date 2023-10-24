@@ -12,6 +12,7 @@
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
 .light {
@@ -21,6 +22,7 @@
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
 }
 
 body {
@@ -64,6 +66,39 @@ body * {
   margin-top: 8px;
 }
 
+#switch {
+  position: relative; /*Qualquer absolute dentro dele irá se mover (top, right, bottom..) em relação a ele */
+  width: 64px;
+  margin: 4px auto; /*Alinha no meio pois é display block*/
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0px;
+  border-radius: 50px;
+
+  position: absolute; /*Sobreposiçaõ de camadas*/
+  right: 0;
+  z-index: 1; /*Coloca no segundo andar*/
+  transform: translateY(
+    -50%
+  ); /*Ele se move sobre a switch, ele é absoluto em relative ao switch; 50% ficará acima da caixa switch*/
+  top: 50%; /*Após aplicar o transform, ela pega o top e divide pela metade.*/
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 999px;
+}
+
 ul {
   list-style: none;
   display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado */
@@ -73,9 +108,11 @@ ul {
 }
 
 ul li a {
+  /*Alinha no meio pois é display flex*/
   display: flex; /*Trabalha com elementos dentro da caixa, deixando lado a lado*/
   align-items: center; /*vertical*/
   justify-content: center; /*horizontal*/
+
   padding: 16px 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
