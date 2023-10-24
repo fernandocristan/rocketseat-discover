@@ -80,7 +80,7 @@ body * {
   border-radius: 50px;
 
   position: absolute; /*Sobreposiçaõ de camadas*/
-  right: 0;
+  left: 0;
   z-index: 1; /*Coloca no segundo andar*/
   transform: translateY(
     -50%
@@ -97,6 +97,11 @@ body * {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 999px;
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
 }
 
 ul {
