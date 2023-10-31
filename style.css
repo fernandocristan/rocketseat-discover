@@ -30,6 +30,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center; /*Top indica onde comeca a posicao de altura da imagem */
   background-size: cover; /*Cobre toda a área visível*/
+  height: 100vh;
 }
 
 body * {
@@ -160,4 +161,16 @@ footer {
   padding: 24ox 0px;
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width: 700px) {
+  /*700px para cima*/
+
+  :root {
+    --bg-url: url("./assets/bg-desktop.jpg");
+  }
+
+  .light {
+    --bg-url: url("./assets/bg-desktop-light.jpg");
+  }
 }
