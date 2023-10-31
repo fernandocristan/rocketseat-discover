@@ -88,6 +88,8 @@ body * {
     -50%
   ); /*Ele se move sobre a switch, ele é absoluto em relative ao switch; 50% ficará acima da caixa switch*/
   top: 50%; /*Após aplicar o transform, ela pega o top e divide pela metade.*/
+
+  animation: slide-out 0.4s; /*Não precisa do forwards porque as configurações iniciais são a dele mesmo*/
 }
 
 #switch span {
@@ -102,8 +104,9 @@ body * {
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  /* right: 0;
+  left: initial; Passou a usar a animação*/
+  animation: slide-in 0.4s forwards; /*o slide-in sera aplicado, Forward é para manter as props finais*/
 }
 
 ul {
@@ -163,6 +166,8 @@ footer {
   font-size: 14px;
 }
 
+/* media queries */
+
 @media (min-width: 700px) {
   /*700px para cima*/
 
@@ -172,5 +177,27 @@ footer {
 
   .light {
     --bg-url: url("./assets/bg-desktop-light.jpg");
+  }
+}
+
+/* animations */
+@keyframes slide-in {
+  /*Move o elemento switch*/
+  /*Quando ele termina (TO) ele mantém as props originais quando começou, no caso left: 0*/
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
   }
 }
