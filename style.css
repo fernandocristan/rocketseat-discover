@@ -92,6 +92,10 @@ body * {
   animation: slide-out 0.4s; /*Não precisa do forwards porque as configurações iniciais são a dele mesmo*/
 }
 
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
 #switch span {
   display: block;
   width: 64px;
